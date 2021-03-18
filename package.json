@@ -1,0 +1,9 @@
+{
+  "type": "module",
+  "dependencies": {
+    "d3-format": "^2.0.0",
+    "date-fns": "^2.19.0",
+    "numeral": "^2.0.6",
+    "strava": "^1.2.1"
+  }
+}
