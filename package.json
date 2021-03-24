@@ -1,8 +1,10 @@
 {
   "type": "module",
   "dependencies": {
+    "axios": "^0.21.1",
     "d3-format": "^2.0.0",
     "date-fns": "^2.19.0",
+    "express": "^4.17.1",
     "numeral": "^2.0.6",
     "strava": "^1.2.1"
   }

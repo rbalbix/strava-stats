@@ -1,6 +1,20 @@
 /**
  * scope=read,profile:read_all,activity:read,activity:read_all
  * http://www.strava.com/oauth/authorize?client_id=63218&response_type=code&redirect_uri=http://localhost/exchange_token&approval_prompt=force&scope=read,profile:read_all,activity:read,activity:read_all
+ *
+ * https://www.strava.com/oauth/authorize
+ * ?client_id=63218
+ * &response_type=code
+ * &redirect_uri=http://localhost:3000
+ * &approval_prompt=force
+ * &scope=read,profile:read_all,activity:read,activity:read_all
+ *
+ *
+ * https://www.strava.com/oauth/token
+ * ?client_id=63218
+ * &client_secret=ac8f12b31be72160ce0248b6f16c7c385e19000a
+ * &code=bbc8aaeb68c5c0dd78b1d8d85c5f9bff2b1d2a7e
+ * &grant_type=authorization_code
  */
 
 import { Strava } from 'strava';
@@ -24,8 +38,8 @@ const strava = new Strava({
   try {
     let totalMovingTimeInSeconds = 0;
     let totalKms = 0;
-    // const bikeToAnalyse = 'Oggi 7.3';
-    const bikeToAnalyse = 'Pretinha';
+    const bikeToAnalyse = 'Oggi 7.3';
+    // const bikeToAnalyse = 'Pretinha';
 
     const athlete = await strava.athletes.getLoggedInAthlete();
     const activities = await strava.activities.getLoggedInAthleteActivities({
